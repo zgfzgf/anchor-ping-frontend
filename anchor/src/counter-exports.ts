@@ -1,8 +1,8 @@
 // Here we export some useful types and functions for interacting with the Anchor program.
 import { AnchorProvider, Program } from '@coral-xyz/anchor';
 import { Cluster, PublicKey } from '@solana/web3.js';
-import CounterIDL from '../target/idl/anchor_counter.json';
-import type { AnchorCounter } from '../target/types/anchor_counter';
+import CounterIDL from '../lucky/luckypaw.json';
+import type { AnchorCounter } from '../lucky/luckypaw.json';
 
 // Re-export the generated IDL and type
 export { AnchorCounter, CounterIDL };
@@ -19,7 +19,7 @@ export function getCounterProgram(provider: AnchorProvider) {
 export function getCounterProgramId(cluster: Cluster) {
   switch (cluster) {
     case 'devnet':
-      return new PublicKey('EcGhLkbDw9rWoJXgwfQiJEy32THQftmVY3mQwKxY6xk1');
+      return new PublicKey('W2wDsRgooFikCVetWg55Be3ty1NzSzvfsJ8wH1dsK3Q');
     case 'testnet':
     case 'mainnet-beta':
     default:
